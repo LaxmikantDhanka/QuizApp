@@ -22,7 +22,7 @@ public:
 	Answer1 = ans1;
 	Answer2 = ans2;
 	Answer3 = ans3;
-	int CorrectAnswer = correctAns;
+	CorrectAnswer = correctAns;
 
 	}
 };
@@ -88,7 +88,8 @@ void __fastcall TMyQuizForm::ConfirmButtonClick(TObject *Sender)
 {
  if(selectedAnswer== currentQuestion.CorrectAnswer)
 		   {
-		   points++ ;
+		   points+= 10;
+		   PointsLabel->Text= points;
 			}
 
 
